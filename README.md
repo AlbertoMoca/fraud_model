@@ -95,13 +95,11 @@ Para la eleccion del modelo a usar y el umbral (probabilidad predicha necesaria 
 
 | Modelo | Accuracy | Precision | Recall | F1 Score |
 |---|---|---|---|---|
-| Random Forest | 0.972 | 0.552 | 0.104 | 0.175 |
-| Gradient Boosting | 0.842 | 0.132 | 0.818 | 0.228 |
-| AdaBoost | 0.822 | 0.130 | 0.916 | 0.227 |
-| SVM      | 0.935 | 0.220 | 0.506 | 0.306 |
-| Red Neuronal | 0.957 | 0.271 | 0.299 | 0.284 |
-
-
+| Random Forest | 0.9704 | 0.0 | 0.0 | 0.0 | 
+| Gradient Boosting | 0.7694 | 0.0676 | 0.5346 | 0.1201 | 
+| AdaBoost | 0.7009 | 0.0577 | 0.5975 | 0.1052 | 
+| SVM | 0.8656 | 0.0605 | 0.2453 | 0.0970 | 
+| Neural Network | 0.9428 | 0.0924 | 0.1069 | 0.0991 | 
 
 
 
