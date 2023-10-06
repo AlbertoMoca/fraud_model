@@ -8,7 +8,7 @@ Este repositorio contiene un modelo de detección de fraudes que incluye:
         - Variables categoricas -> One Hot Encoding 
         - Oversampling para balancer los casos con y sin fraude
     - Entrenamiento y preparacion para uso en PROD.
-- Implementaciones de modelos en la carpeta **fraud_model**, que se pueden consumir a través de una función serverless en Azure en la siguiente URL: https://fraudtest.azurewebsites.net/api/test3?code=sumSaOkAhXr6bBmEyuSBDIzyB9_CX3x-nY8nY_iEZI0lAzFuslrhJg==
+- Implementaciones de modelos en la carpeta **fraud_model**, que se pueden consumir a través de una función serverless en Azure en la siguiente URL: https://fraudtest.azurewebsites.net/api/test3
 
 ### Consumo del Modelo
 
@@ -57,7 +57,8 @@ import requests
 import json
 
 # URL de la función en Azure
-url = "https://fraudtest.azurewebsites.net/api/test3?code=sumSaOkAhXr6bBmEyuSBDIzyB9_CX3x-nY8nY_iEZI0lAzFuslrhJg=="
+token = 'sumSaOkAhXr6bBmEyuSBDIzyB9_CX3x-nY8nY_iEZI0lAzFuslrhJg==' # METER EN .env
+url = f"https://fraudtest.azurewebsites.net/api/test3?code={token}"
 
 # Datos de entrada en formato JSON
 input_data = {
