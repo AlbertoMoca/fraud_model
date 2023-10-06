@@ -46,14 +46,6 @@ La función devolverá una respuesta en formato JSON que incluye el nombre del m
 
 Ejemplo:
 ```
-
-import requests
-import json
-
-# URL de la función en Azure
-url = "https://fraudtest.azurewebsites.net"
-
-# Datos de entrada en formato JSON
 import requests
 import json
 
