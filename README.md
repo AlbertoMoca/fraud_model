@@ -1,7 +1,13 @@
 #  :credit_card: Modelo de Detección de Fraudes 
 
 Este repositorio contiene un modelo de detección de fraudes que incluye:
-- Un análisis descriptivo de los datos y el modelado (Random Forest, Gradient Boosting, AdaBoost, SVM, Neural Network) en el archivo **analysis_and_modeling.ipynb** 
+- Un análisis descriptivo de los datos y el modelado (Random Forest, Gradient Boosting, AdaBoost, SVM, Neural Network) en el archivo **analysis_and_modeling.ipynb**
+    - Relacion entre las variables y el fraude
+    - Tratamiento de los datos
+        - Extraccion de caracteristicas basadas en historial del cliente (El dispositivo se usó antes?, Hay Fraudes previos?, Numero de dispositivos usados anteriormente, No de transacciones )
+        - Variables categoricas -> One Hot Encoding 
+        - Oversampling para balancer los casos con y sin fraude
+    - Entrenamiento y preparacion para uso en PROD.
 - Implementaciones de modelos en la carpeta **fraud_model**, que se pueden consumir a través de una función serverless en Azure en la siguiente URL: https://fraudtest.azurewebsites.net/api/test3?code=sumSaOkAhXr6bBmEyuSBDIzyB9_CX3x-nY8nY_iEZI0lAzFuslrhJg==
 
 ### Consumo del Modelo
