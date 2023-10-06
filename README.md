@@ -10,29 +10,30 @@ Puede utilizar la función en Azure para predecir la probabilidad de fraude en u
 
 
 ```
-{
-  "model": "AdaBoost",
-  "threshold": 0.5,
-  "inputs": {
-    "género": "M",
-    "establecimiento": "Tienda departamental",
-    "ciudad": "Guadalajara",
-    "status_txn": "Aceptada",
-    "dispositivo_marca": "Apple",
-    "dispositivo_proveedor": "ATT",
-    "is_prime": true,
-    "has_previous_fraud": true,
-    "device_used_before": true,
-    "linea_tc": 1000,
-    "interes_tc": 0.15,
-    "monto": 500,
-    "hora": 14,
-    "dcto": 50,
-    "cashback": 10,
-    "n_user_transactions": 5,
-    "n_dispositivos_acumulados": 2
+input_data = {
+  "model": "AdaBoost",                 # Nombre del modelo a utilizar (como vienen en la tabla de resultados).
+  "threshold": 0.5,                    # Umbral de decisión para clasificar fraude o no fraude.
+  "inputs": {                          # Datos de entrada para la predicción.
+    "género": "M",                     # Género del titular de la tarjeta .
+    "establecimiento": "Tienda departamental",  # Tipo de establecimiento de la transacción.
+    "ciudad": "Guadalajara",           # Ciudad donde se realizó la transacción.
+    "status_txn": "Aceptada",          # Estado de la transacción (por ejemplo, Aceptada).
+    "dispositivo_marca": "Apple",      # Marca del dispositivo utilizado en la transacción.
+    "dispositivo_proveedor": "ATT",     # Proveedor del dispositivo utilizado.
+    "is_prime": True,                  # Si el titular de la tarjeta es miembro Prime (verdadero o falso).
+    "has_previous_fraud": True,         # Si ha habido fraudes anteriores en la cuenta (verdadero o falso).
+    "device_used_before": True,        # Si el dispositivo se ha utilizado anteriormente (verdadero o falso).
+    "linea_tc": 1000,                  # Límite de crédito de la tarjeta de crédito.
+    "interes_tc": 0.15,                # Tasa de interés de la tarjeta de crédito.
+    "monto": 500,                      # Monto de la transacción.
+    "hora": 14,                        # Hora en la que se realizó la transacción (formato militar).
+    "dcto": 50,                        # Descuento aplicado en la transacción.
+    "cashback": 10,                    # Cashback obtenido en la transacción.
+    "n_user_transactions": 5,          # Número de transacciones anteriores del usuario.
+    "n_dispositivos_acumulados": 2     # Número de dispositivos utilizados anteriormente en la cuenta.
   }
 }
+
 ```
 La función devolverá una respuesta en formato JSON que incluye el nombre del modelo, si se considera que es un fraude y la probabilidad de fraude deacuerdo al modelo usado:
 
